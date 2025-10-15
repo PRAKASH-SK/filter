@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.student-table {
+  width: 80%;
+  max-width: 1200px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.student-table th {
+  background-color: #0077ff;
+  color: white;
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.student-table td {
+  padding: 20px 12px; /* Increased padding to accommodate zoom */
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  font-size: 1rem;
+  vertical-align: middle;
+  position: relative;
+  background-color: white;
+}
+
+.student-table tr:last-child td {
+  border-bottom: none;
+}
+
+.student-table tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Simple zoom effect without layout issues */
+.zoom {
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+  color: #0077ff;
+  font-weight: 600;
+  background-color: rgba(0, 119, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 119, 255, 0.2);
+  z-index: 10;
+}
+
+/* Ensure the table cells can accommodate the scaled content */
+.student-table th:first-child,
+.student-table td:first-child {
+  width: 20%;
+}
+
+.student-table th:nth-child(2),
+.student-table td:nth-child(2) {
+  width: 20%;
+}
+
+.student-table th:nth-child(3),
+.student-table td:nth-child(3) {
+  width: 25%;
+}
+
+.student-table th:nth-child(4),
+.student-table td:nth-child(4) {
+  width: 35%;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .student-table {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+  
+  .student-table td {
+    padding: 16px 8px;
+  }
+  
+  .heading {
+    font-size: 1.5rem;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 600px) {
+  .student-table {
+    font-size: 0.8rem;
+  }
+  
+  .student-table th,
+  .student-table td {
+    padding: 12px 6px;
+  }
+  
+  .zoom {
+    padding: 2px 4px;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 480px) {
+  .student-table th:nth-child(4),
+  .student-table td:nth-child(4) {
+    width: 40%;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.02);
+  }
+}

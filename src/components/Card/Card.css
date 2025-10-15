@@ -1,0 +1,57 @@
+.travel-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  margin: 20px;
+}
+
+.travel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.travel-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.travel-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.travel-title {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.travel-location {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.travel-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.travel-btn {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.travel-btn:hover {
+  background-color: #0d6efd;
+}
