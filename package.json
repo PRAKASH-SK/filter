@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://PRAKASH-SK.github.io/filter",
   "type": "module",
   "scripts": {
     "dev": "vite",
